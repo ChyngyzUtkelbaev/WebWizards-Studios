@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B;
+    color: #fff;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo img {
+    max-width: 150px; 
+    height: auto; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1e40af;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p {
+    margin-bottom: 2rem;
+}
+
+header .image img {
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header {
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.features,
+.pricing,
+.our-services,
+.our-projects,
+.client-testimonials {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.features .card,
+.pricing .card,
+.our-services .card,
+.our-projects .card,
+.client-testimonials .card {
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover,
+.pricing .card:hover,
+.our-services .card:hover,
+.our-projects .card:hover,
+.client-testimonials .card:hover {
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.features .card span,
+.our-services .card span,
+.our-projects .card span,
+.client-testimonials .card span {
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .card h4,
+.our-services .card h4,
+.our-projects .card h4,
+.client-testimonials .card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p,
+.our-services .card p,
+.our-projects .card p,
+.client-testimonials .card p {
+    margin-bottom: 1rem;
+}
+
+.features .card a,
+.our-services .card a,
+.our-projects .card a,
+.client-testimonials .card a {
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.features .card a:hover,
+.our-services .card a:hover,
+.our-projects .card a:hover,
+.client-testimonials .card a:hover {
+    color: #1e40af;
+}
+
+.pricing .card,
+.our-services .card,
+.our-projects .card,
+.client-testimonials .card {
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.pricing .card h3,
+.our-services .card h3,
+.our-projects .card h3,
+.client-testimonials .card h3 {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff;
+}
+
+.pricing .card p,
+.our-services .card p,
+.our-projects .card p,
+.client-testimonials .card p {
+    margin-bottom: 0.75rem;
+}
+
+.pricing .card p i,
+.our-services .card p i,
+.our-projects .card p i,
+.client-testimonials .card p i {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.pricing .card button,
+.our-services .card button,
+.our-projects .card button,
+.client-testimonials .card button {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.pricing .card button:hover,
+.our-services .card button:hover,
+.our-projects .card button:hover,
+.client-testimonials .card button:hover {
+    background-color: #1e40af;
+    border-color: #1e40af;
+}
+
+footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+footer .column .logo {
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p {
+    margin-bottom: 2rem;
+}
+
+footer .column .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a {
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover {
+    color: #fff;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+footer .column h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a {
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover {
+    color: #1d4ed8;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.our-services,
+.our-projects,
+.client-testimonials {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.our-services .card,
+.our-projects .card,
+.client-testimonials .card {
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.our-services .card:hover,
+.our-projects .card:hover,
+.client-testimonials .card:hover {
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.our-services .card span,
+.our-projects .card span,
+.client-testimonials .card span {
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.our-services .card h4,
+.our-projects .card h4,
+.client-testimonials .card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.our-services .card p,
+.our-projects .card p,
+.client-testimonials .card p {
+    margin-bottom: 1rem;
+}
+
+.our-services .card a,
+.our-projects .card a,
+.client-testimonials .card a {
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.our-services .card a:hover,
+.our-projects .card a:hover,
+.client-testimonials .card a:hover {
+    color: #1e40af;
+}
